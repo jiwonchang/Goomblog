@@ -6,7 +6,7 @@ var methodOverride = require("method-override");
 var app = express();
 
 app.set("view engine", "ejs");
-
+app.use(express.static("public"));
 mongoose.connect("mongodb://localhost/goomblog_app", {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
@@ -40,7 +40,7 @@ var Entry = mongoose.model("Entry", entrySchema);
 
 // Landing Page
 app.get("/", function(req, res) {
-    res.send("WELCOME TO GOOMBLOG, WHERE YOU CAN WRITE YOUR THOUGHTS, EXPERIENCES, DREAMS, AND HOPES.");
+    res.render("landing");
 });
 
 // Index Route
