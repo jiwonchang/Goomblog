@@ -112,7 +112,16 @@ app.put("/entries/:id", function(req, res) {
 });
 
 // Destroy Route
-
+app.delete("/entries/:id", function(req, res) {
+    var id = req.params.id;
+    Entry.findByIdAndRemove(id, function(err) {
+        if (err) {
+            res.redirect("/entries");
+        } else {
+            res.redirect("/entries");
+        }
+    });
+});
 
 
 

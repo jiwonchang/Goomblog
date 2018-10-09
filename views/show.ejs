@@ -6,4 +6,8 @@
 <h2><%= entry.keyEvents %></h2>
 <p><%= entry.content %></p>
 
+<form action="/entries/<%= entry._id %>?_method=DELETE" method="POST">
+    <button>Delete</button>
+</form>
+
 <% include ./partials/footer %>
