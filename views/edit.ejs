@@ -1,0 +1,10 @@
+<% include ./partials/header %>
+
+<form action="/entries/<%= entry._id %>?_method=PUT" method="POST">
+    <input name="entry[title]" type="text"><%= entry.title %></input>
+    <input name="entry[image]" type="text"><%= entry.image %></input>
+    <input name="entry[keyEvents]" type="text"><%= entry.keyEvents %></input>
+    <input name="entry[content]" type="text"><%= entry.content %></input>
+</form>
+
+<% include ./partials/footer %>

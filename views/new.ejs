@@ -1,0 +1,13 @@
+<% include ./partials/header %>
+
+<h1>THIS IS THE NEW PAGE</h1>
+
+<form action="/entries" method="POST">
+    <input name="entry[title]" type="text" placeholder="Title">
+    <input name="entry[image]" type="text" placeholder="Image URL">
+    <input name="entry[keyEvents]" type="text" placeholder="Key Events">
+    <input name="entry[content]" type="text" placeholder="Content">
+    <button>Upload Entry</button>
+</form>
+
+<% include ./partials/footer %>
