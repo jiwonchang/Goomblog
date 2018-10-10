@@ -3,10 +3,14 @@
 <h1>THIS IS THE NEW PAGE</h1>
 
 <form action="/entries" method="POST">
-    <input name="entry[title]" type="text" placeholder="Title">
-    <input name="entry[image]" type="text" placeholder="Image URL">
-    <input name="entry[keyEvents]" type="text" placeholder="Key Events">
-    <input name="entry[content]" type="text" placeholder="Content">
+    <label for="title">Title</label>
+    <input id="title" name="entry[title]" type="text" placeholder="Title">
+    <label for="image">Image</label>
+    <input id="image" name="entry[image]" type="text" placeholder="Image URL">
+    <label for="keyEvents">Key Events</label>
+    <input id="keyEvents" name="entry[keyEvents]" type="text" placeholder="Key Events">
+    <label for="content">Content</label>
+    <textarea id="content" name="entry[content]" type="text" placeholder="Content"></textarea>
     <button>Upload Entry</button>
 </form>
 

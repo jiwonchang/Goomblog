@@ -1,10 +1,14 @@
 <% include ./partials/header %>
 
 <h1><%= entry.title %></h1>
-<h4><%= entry.created %></h4>
+<h4><%= entry.created.toDateString() %></h4>
 <img src="<%= entry.image %>">
 <h2><%= entry.keyEvents %></h2>
 <p><%= entry.content %></p>
+
+<form action="/entries/<%= entry._id %>/edit" method="GET">
+    <button>Edit</button>
+</form>
 
 <form action="/entries/<%= entry._id %>?_method=DELETE" method="POST">
     <button>Delete</button>

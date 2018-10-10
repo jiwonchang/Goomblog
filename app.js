@@ -93,7 +93,7 @@ app.get("/entries/:id/edit", function(req, res) {
         if (err) {
             console.log(err);
         } else {
-            res.render("edit");
+            res.render("edit", {entry: foundEntry});
         }
     });
 });
